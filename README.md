@@ -1,5 +1,5 @@
 # Dotnet-API
-### API feita utilizando Mysql Server.
+### API feita utilizando banco de dados Mysql Server.
 
 #### Instalação
 1. Faça o clone do projeto.

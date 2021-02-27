@@ -41,3 +41,16 @@ C:\Users\fabio\app\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
 C:\Users\fabio\app\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
 C:\Users\fabio\app\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\fabio\app\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\fabio\app\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+C:\Users\fabio\app\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\fabio\app\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\fabio\app\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\fabio\app\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\fabio\app\bin\Debug\netcoreapp3.1\Tests\AppService.Tests\obj\AppService.Tests.csproj.nuget.dgspec.json
+C:\Users\fabio\app\bin\Debug\netcoreapp3.1\Tests\AppService.Tests\obj\project.assets.json
+C:\Users\fabio\app\bin\Debug\netcoreapp3.1\Tests\AppService\obj\AppService.csproj.nuget.dgspec.json
+C:\Users\fabio\app\bin\Debug\netcoreapp3.1\Tests\AppService\obj\project.assets.json
+C:\Users\fabio\app\bin\Debug\netcoreapp3.1\xunit.abstractions.dll
+C:\Users\fabio\app\bin\Debug\netcoreapp3.1\xunit.assert.dll
+C:\Users\fabio\app\bin\Debug\netcoreapp3.1\xunit.core.dll
+C:\Users\fabio\app\bin\Debug\netcoreapp3.1\xunit.execution.dotnet.dll

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fabio\\app\\app.csproj": {}
+    "C:\\Users\\fabio\\app\\test\\AppService.Tests\\AppService.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fabio\\app\\app.csproj": {
+    "C:\\Users\\fabio\\app\\test\\AppService.Tests\\AppService.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fabio\\app\\app.csproj",
-        "projectName": "app",
-        "projectPath": "C:\\Users\\fabio\\app\\app.csproj",
+        "projectUniqueName": "C:\\Users\\fabio\\app\\test\\AppService.Tests\\AppService.Tests.csproj",
+        "projectName": "AppService.Tests",
+        "projectPath": "C:\\Users\\fabio\\app\\test\\AppService.Tests\\AppService.Tests.csproj",
         "packagesPath": "C:\\Users\\fabio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fabio\\app\\obj\\",
+        "outputPath": "C:\\Users\\fabio\\app\\test\\AppService.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\fabio\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -36,36 +36,21 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+            "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[3.0.0, )"
+              "version": "[16.5.0, )"
             },
-            "Microsoft.EntityFrameworkCore": {
+            "coverlet.collector": {
               "target": "Package",
-              "version": "[3.1.12, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "target": "Package",
-              "version": "[3.1.5, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.1.1, )"
-            },
-            "Pomelo.EntityFrameworkCore.MySql": {
-              "target": "Package",
-              "version": "[3.2.4, )"
-            },
-            "System.ComponentModel.Annotations": {
-              "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[1.2.0, )"
             },
             "xunit": {
               "target": "Package",
-              "version": "[2.4.1, )"
+              "version": "[2.4.0, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.0, )"
             }
           },
           "imports": [
@@ -79,9 +64,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

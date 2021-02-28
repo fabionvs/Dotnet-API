@@ -93,7 +93,7 @@ namespace app.Controllers
             }
             else
             {
-                return Ok("Não encontrado!");
+                return BadRequest("Não encontrado!");
             }
         }
 

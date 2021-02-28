@@ -20,7 +20,6 @@
 	"Parcelas" : 5,
 	"ValorFinanciado" : 10000.00,
 }`
-![alt text](https://ibb.co/3C5pzfr)
 
 <b>Put:</b> `https://localhost:5001/api/contratos/{id}`
 

@@ -52,10 +52,11 @@ namespace app.Controllers
                 var valor = (model.ValorFinanciado / model.Parcelas);
                 for (int i = 0; i < model.Parcelas; i++)
                 {
+                    int vencimento = i + 1;
                     Prestacao prestacao = new Prestacao();
                     prestacao.Valor = valor;
                     prestacao.ContratoId = model.Id;
-                    prestacao.DataVencimento = DateTime.Today.AddMonths(i);
+                    prestacao.DataVencimento = DateTime.Today.AddMonths(vencimento);
                     context.Prestacoes.Add(prestacao);
                 }
                 await context.SaveChangesAsync();

@@ -3,9 +3,9 @@
 
 #### Instalação
 1. Faça o clone do projeto.
-2. Instale o Mysql Server e altere os dados da conexão conexão no arquivo `appsettings.json`.
-3. Instale as migrations no banco utilizando o comando: `dotnet ef database update`
-4. Instale o certificado `dotnet ef database update`
+2. Instale o <b>Mysql Server</b> e altere os dados da conexão conexão no arquivo `appsettings.json`.
+3. Instale as migrations no banco com os comandos `dotnet tool install --global dotnet-ef` e também: `dotnet ef database update`
+4. Instale o certificado para rodar o servidor `dotnet dev-certs https --trust`
 5. Rode o servidor `dotnet run`
 
 #### Utilizando a API
@@ -20,7 +20,6 @@
 	"Parcelas" : 5,
 	"ValorFinanciado" : 10000.00,
 }`
-
 
 <b>Put:</b> `https://localhost:5001/api/contratos/{id}`
 

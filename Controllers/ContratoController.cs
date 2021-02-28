@@ -71,29 +71,50 @@ namespace app.Controllers
         [Route("{id:int}")]
         public async Task<ActionResult<Contrato>> GetById([FromServices] DataContext context, int id)
         {
-            var cacheKey = "contrato";
-            if (!_cache.TryGetValue(cacheKey, out Contrato contrato))
-            {
-                contrato = await context.Contratos.Include(c => c.Prestacoes).FirstOrDefaultAsync(c => c.Id == id);
-                var cacheExpiryOptions = new MemoryCacheEntryOptions
-                {
-                    AbsoluteExpiration = DateTime.Today.AddDays(1),
-                    Priority = CacheItemPriority.High,
-                    SlidingExpiration = TimeSpan.FromMinutes(2)
-                };
-                _cache.Set(cacheKey, contrato, cacheExpiryOptions);
-            }
+            var contrato = await context.Contratos.Include(c => c.Prestacoes).FirstOrDefaultAsync(c => c.Id == id);
             return new JsonResult(contrato);
-
         }
 
-        // [Route("prestacoes/{id:int}")]
-        // public async Task<ActionResult<List<Prestacao>>> GetByPrestacao([FromServices] DataContext context, int id)
-        // {
-        //     //var prestacoes = await context.Prestacoes.Where(x => x.ContratoId == id).ToListAsync();
-        //     return new JsonResult(prestacoes);
+        [HttpPut]
+        [Route("{id:int}")]
+        public async Task<ActionResult<Contrato>> Put(
+            [FromServices] DataContext context,
+            [FromBody] Contrato model,
+            int id)
+        {
+            var contrato = await context.Contratos.Include(c => c.Prestacoes).FirstOrDefaultAsync(c => c.Id == id);
+            if (contrato != null)
+            {
+                contrato.ValorFinanciado = model.ValorFinanciado;
+                contrato.Parcelas = model.Parcelas;
+                contrato.DataContrato = model.DataContrato;
+                context.SaveChanges();
+                return contrato;
+            }
+            else
+            {
+                return Ok("Não encontrado!");
+            }
+        }
 
-        // }
-
+        [HttpDelete]
+        [Route("{id:int}")]
+        public async Task<ActionResult<Contrato>> Delete(
+            [FromServices] DataContext context,
+            [FromBody] Contrato model,
+            int id)
+        {
+            Contrato contrato = await context.Contratos.Include(c => c.Prestacoes).FirstOrDefaultAsync(c => c.Id == id);
+            if (contrato != null)
+            {
+                context.Remove(contrato);
+                context.SaveChanges();
+                return new JsonResult(contrato);
+            }
+            else
+            {
+                return BadRequest(ModelState);
+            }
+        }
     }
 }

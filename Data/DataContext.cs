@@ -14,7 +14,8 @@ namespace app.Data
         {
             modelBuilder.Entity<Contrato>()
                 .HasMany(c => c.Prestacoes)
-                .WithOne(e => e.Contrato);
+                .WithOne(e => e.Contrato)
+                .OnDelete(DeleteBehavior.ClientCascade);
         }
     }
 }

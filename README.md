@@ -3,7 +3,7 @@
 
 #### Instalação
 1. Faça o clone do projeto.
-2. Instale o <b>Mysql Server<b> e altere os dados da conexão conexão no arquivo `appsettings.json`.
+2. Instale o <b>Mysql Server</b> e altere os dados da conexão conexão no arquivo `appsettings.json`.
 3. Instale as migrations no banco utilizando o comando: `dotnet ef database update`
 4. Instale o certificado `dotnet ef database update`
 5. Rode o servidor `dotnet run`

@@ -21,7 +21,7 @@ namespace app.Models
         {
             get
             {
-                if (DataVencimento >= DateTime.Now)
+                if (DataVencimento >= DateTime.Now && DataPagamento == null)
                 {
                     _status = "Aberta";
                 }
